@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     requestPayerEmail: true,
     total: {
       label: 'total',
-      amount: '19.99'
+      amount: 19.99
     }
   });
 
