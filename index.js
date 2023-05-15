@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   paymentRequest.on('paymentmethod', async(e) => {
     const amount = 1999;
-    const clientSecret = await (await fetch(`https://2o68cldz87.execute-api.us-east-1.amazonaws.com/test/card_pay?amount=${amount}`, { mode: 'cors' })).json();
+    // const clientSecret = await (await fetch(`https://2o68cldz87.execute-api.us-east-1.amazonaws.com/test/card_pay?amount=${amount}`, { mode: 'cors' })).json();
+    const clientSecret = 'pi_3N81pbEQJGo8pVHj1Maiv03A_secret_Zw2dohiJv9xfZzzYH4OpBvxvT';
     addMessage("Payment Intent Created");
     const {error, paymentIntent} = stripe.confirmCardPayment(clientSecret, {
       payment_method: e.paymentMethod.id
